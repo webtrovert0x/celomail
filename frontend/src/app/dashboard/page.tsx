@@ -885,7 +885,7 @@ export default function Dashboard() {
           )}
 
           {/* Compose / Drafts Form */}
-          {activeTab === 'compose' && (
+          {activeTab === 'compose' && myAlias && (
              <div className="max-w-3xl mx-auto mt-10 p-8 border border-gray-100 rounded-xl bg-white shadow-sm">
                <h2 className="text-2xl font-bold mb-6 text-gray-800">New Draft</h2>
                <div className="space-y-6">
@@ -967,7 +967,7 @@ export default function Dashboard() {
           )}
 
           {/* Registration Fallback (If no alias) */}
-          {(!myAlias && activeTab !== 'compose' && !loadingMessages && !loadingSent) && (
+          {(!myAlias && !loadingMessages && !loadingSent) && (
              <div className="max-w-md mx-auto mt-20 p-8 border border-gray-100 rounded-xl bg-gray-50 shadow-sm text-center">
                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6 text-yellow-500">
                  <Key size={32} />
