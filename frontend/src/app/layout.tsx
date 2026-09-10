@@ -1,25 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
 import { headers } from 'next/headers'
 import ContextProvider from '@/context'
 import { Toaster } from 'react-hot-toast'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cmail.com'),
-  title: 'CeloMail - Secure Web3 Messaging',
-  description: 'End-to-End Encrypted, Decentralized Email on the Celo Blockchain.',
+  metadataBase: new URL('https://mailora.xyz'),
+  title: 'Mailora - AI-Powered Decentralized Web3 Messaging on BotChain',
+  description: 'Next-generation, end-to-end encrypted Web3 mailbox on BotChain Testnet with AI Smart Compose, threat detection, and summarization.',
   openGraph: {
-    title: 'CeloMail - Secure Web3 Messaging',
-    description: 'End-to-End Encrypted, Decentralized Email on the Celo Blockchain.',
-    url: 'https://cmail.com',
-    siteName: 'CeloMail',
+    title: 'Mailora - AI-Powered Decentralized Web3 Messaging',
+    description: 'End-to-End Encrypted, Zero-Knowledge Mailbox on BotChain with Native AI Superpowers.',
+    url: 'https://mailora.xyz',
+    siteName: 'Mailora',
     images: [
       {
-        url: '/icon.png', // Next.js automatically picks up our icon.png for OG if we reference it, or we can just point to it
+        url: '/icon.png',
         width: 800,
         height: 600,
       },
@@ -29,8 +25,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CeloMail - Secure Web3 Messaging',
-    description: 'End-to-End Encrypted, Decentralized Email on the Celo Blockchain.',
+    title: 'Mailora - AI-Powered Decentralized Web3 Messaging',
+    description: 'End-to-End Encrypted, Zero-Knowledge Mailbox on BotChain with Native AI Superpowers.',
     images: ['/icon.png'],
   },
 }
@@ -44,15 +40,18 @@ export default async function RootLayout({
   const cookies = headersObj.get('cookie')
 
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="dark">
+      <body className="bg-[#06090e] text-slate-100 selection:bg-emerald-500/30 selection:text-emerald-200 antialiased font-sans">
         <ContextProvider cookies={cookies}>
           {children}
           <Toaster position="bottom-right" toastOptions={{
             style: {
-              background: '#1e293b',
-              color: '#fff',
-              border: '1px solid rgba(255,255,255,0.1)'
+              background: '#0d131f',
+              color: '#f1f5f9',
+              border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: '16px',
+              fontSize: '13px',
+              boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5)'
             }
           }} />
         </ContextProvider>

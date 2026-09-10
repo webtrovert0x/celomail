@@ -37,18 +37,18 @@ export async function POST(request: Request) {
     }
 
     const info = await transporter.sendMail({
-      from: `"CeloMail Notifications" <${process.env.EMAIL_USER}>`,
+      from: `"Mailora Notifications" <${process.env.EMAIL_USER}>`,
       to: pref.email,
-      subject: `New secure message from ${senderAlias || 'an unknown user'}`,
+      subject: `New secure Web3 message from ${senderAlias || 'an on-chain sender'}`,
       html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
-          <h2 style="color: #ca8a04;">🟡 CeloMail Notification</h2>
-          <p>You have received a new end-to-end encrypted message on CeloMail from <strong>${senderAlias || 'an unknown sender'}</strong>.</p>
-          <p>Because CeloMail is fully decentralized and encrypted, we cannot show you the content of the message here.</p>
-          <div style="margin: 30px 0;">
-            <a href="https://cmail.com/dashboard" style="background-color: #eab308; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">Unlock Message in App</a>
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; background: #06090e; color: #f1f5f9; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;">
+          <h2 style="color: #10b981; margin-top: 0;">✦ Mailora Notification</h2>
+          <p>You have received a new end-to-end encrypted message on BotChain from <strong>${senderAlias || 'an on-chain contact'}</strong>.</p>
+          <p style="color: #94a3b8;">Because Mailora messages are zero-knowledge encrypted and pinned to IPFS, only your connected wallet can decrypt and unlock the contents.</p>
+          <div style="margin: 28px 0;">
+            <a href="http://localhost:3000/dashboard" style="background: #10b981; color: #06090e; padding: 12px 24px; text-decoration: none; border-radius: 10px; font-weight: bold; display: inline-block;">Open Mailora Dashboard</a>
           </div>
-          <p style="font-size: 12px; color: #888;">To stop receiving these emails, update your preferences in the CeloMail Settings menu.</p>
+          <p style="font-size: 12px; color: #64748b;">To stop receiving notifications, update your settings in the Mailora dashboard.</p>
         </div>
       `,
     });

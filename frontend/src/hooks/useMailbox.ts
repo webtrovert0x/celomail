@@ -1,5 +1,5 @@
 import { useAccount, usePublicClient, useWalletClient } from 'wagmi';
-import { parseAbiItem } from 'viem';
+import { parseAbiItem, parseEther } from 'viem';
 import { DecentralizedMailABI, CONTRACT_ADDRESS, DEPLOYMENT_BLOCK } from '../utils/abi';
 
 export function useMailbox() {
@@ -22,9 +22,31 @@ export function useMailbox() {
     return hash;
   };
 
+  const registerGaslessAlias = async (aliasName: string) => {
+    const res = await fetch('/api/relayer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'registerAlias', alias: aliasName })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Gasless alias registration failed');
+    return data.txHash;
+  };
+
   const signMessageText = async (text: string) => {
     if (!walletClient) throw new Error("Wallet not connected");
     return await walletClient.signMessage({ message: text });
+  };
+
+  const sendNativePayment = async (toAddress: string, amountInBot: string) => {
+    if (!walletClient || !publicClient) throw new Error("Wallet not connected");
+    const hash = await walletClient.sendTransaction({
+      to: toAddress as `0x${string}`,
+      value: parseEther(amountInBot)
+    });
+    const receipt = await publicClient.waitForTransactionReceipt({ hash });
+    if (receipt.status === 'reverted') throw new Error("Payment transaction reverted on BotChain");
+    return hash;
   };
 
   const sendMessage = async (toAlias: string, contentCID: string) => {
@@ -40,6 +62,17 @@ export function useMailbox() {
     const receipt = await publicClient.waitForTransactionReceipt({ hash });
     if (receipt.status === 'reverted') throw new Error("Transaction reverted on chain");
     return hash;
+  };
+
+  const sendGaslessMessage = async (toAlias: string, contentCID: string) => {
+    const res = await fetch('/api/relayer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'sendMessage', toAlias, contentCID })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Gasless dispatch failed');
+    return data.txHash;
   };
 
   const getMyMessages = async () => {
@@ -162,7 +195,10 @@ export function useMailbox() {
 
   return {
     registerAlias,
+    registerGaslessAlias,
     sendMessage,
+    sendGaslessMessage,
+    sendNativePayment,
     signMessageText,
     getMyMessages,
     getSentMessages,

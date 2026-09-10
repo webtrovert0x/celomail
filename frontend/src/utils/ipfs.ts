@@ -17,7 +17,7 @@ export async function uploadToIPFS(content: string): Promise<string> {
           encryptedEmail: content
         },
         pinataMetadata: {
-          name: "cmail-message.json"
+          name: "mailora-message.json"
         }
       })
     });

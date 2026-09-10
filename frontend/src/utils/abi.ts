@@ -15,6 +15,18 @@ export const DecentralizedMailABI = parseAbi([
   "event MessageSent(address indexed from, address indexed to, string contentCID, uint256 timestamp)"
 ]);
 
-// We will update this address once we deploy the contract to Sepolia
-export const CONTRACT_ADDRESS = "0x96E3D3e36Feb6413eF649be189020F470c1fe742";
-export const DEPLOYMENT_BLOCK = BigInt("34499000");
+// BotChain Testnet Contract Address (can be overridden by NEXT_PUBLIC_CONTRACT_ADDRESS in .env.local)
+export const CONTRACT_ADDRESS = (process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || "0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a") as `0x${string}`;
+export const DEPLOYMENT_BLOCK = BigInt(process.env.NEXT_PUBLIC_DEPLOYMENT_BLOCK || "0");
+
+export const EXPLORER_BASE_URL = "https://scan.bohr.life";
+export const RPC_URL = "https://rpc.bohr.life";
+export const CHAIN_ID = 968;
+
+export function getExplorerAddressUrl(address: string) {
+  return `${EXPLORER_BASE_URL}/address/${address}`;
+}
+
+export function getExplorerTxUrl(hash: string) {
+  return `${EXPLORER_BASE_URL}/tx/${hash}`;
+}

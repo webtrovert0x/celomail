@@ -15,8 +15,8 @@ if (!projectId) {
 
 // Set up metadata
 const metadata = {
-  name: 'cmail',
-  description: 'cmail - Decentralized Email',
+  name: 'Mailora',
+  description: 'Mailora - AI-Powered Decentralized Web3 Messaging on BotChain',
   url: 'http://localhost:3000', // origin must match your domain & subdomain
   icons: ['https://avatars.githubusercontent.com/u/179229932']
 }

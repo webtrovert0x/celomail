@@ -15,6 +15,11 @@ module.exports = {
       url: "https://rpc.ankr.com/celo_sepolia",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 11142220
+    },
+    botchain: {
+      url: "https://rpc.bohr.life",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 968
     }
   }
 };

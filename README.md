@@ -1,98 +1,149 @@
-# 🟡 CeloMail
+# ✦ Mailora — AI-Powered Decentralized Web3 Mailbox
 
-CeloMail is a fully decentralized, end-to-end encrypted Web3 messaging application built on the **Celo** blockchain. 
+<div align="center">
+  <img src="frontend/public/logo.png" alt="Mailora Logo" width="110" height="110" style="border-radius: 50%; margin-bottom: 12px;" />
+  <br />
+  <p><strong>Decentralized, End-to-End Encrypted, AI-Supercharged Web3 Messaging on BotChain Testnet</strong></p>
+  
+  <p>
+    <a href="https://scan.bohr.life/address/0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a"><img src="https://img.shields.io/badge/BotChain_Testnet-Chain_ID_968-059669?style=for-the-badge" alt="BotChain Testnet" /></a>
+    <img src="https://img.shields.io/badge/Smart_Contract-0xC0DE8FE9...-0284c7?style=for-the-badge" alt="Contract" />
+    <img src="https://img.shields.io/badge/AI_Engine-Gemini_%2F_Neural_Shield-10b981?style=for-the-badge" alt="AI Engine" />
+  </p>
+</div>
 
-By combining the immutability of smart contracts with the decentralized storage of **IPFS**, CeloMail ensures that your communications remain entirely private, secure, and uncensorable.
+---
 
-![CeloMail Dashboard UI](frontend/public/IMG_6074.PNG)
+## 🌟 Overview
 
-## ✨ Features
+**Mailora** is a state-of-the-art decentralized mailbox operating natively on **BotChain Testnet (Chain ID 968)** with native token **Botcoin (`BOT`)**. 
 
-- **End-to-End Encryption**: Message payloads are encrypted locally in your browser using the recipient's public key before ever leaving your device. Only the intended recipient can decrypt the message.
-- **Cryptographic Signatures**: Senders cryptographically sign their messages with their wallet. Receivers see a "Verified Signature" badge, proving the message wasn't spoofed or tampered with.
-- **Rich Text & Attachments**: Compose messages using a full Rich Text Editor (React-Quill) and attach files up to 5MB natively.
-- **Decentralized Storage (IPFS)**: Encrypted JSON payloads (containing the text, signature, and attachment CID) are pinned to IPFS via Pinata.
-- **On-Chain Message Routing**: The `DecentralizedMail` Solidity smart contract maps user aliases (e.g, `satoshi@cmail.com`) to their wallet addresses and keeps an immutable registry of message CIDs.
-- **Auto-Saving Drafts**: Real-time auto-saving to MongoDB ensures you never lose a message while composing.
-- **Email Notifications**: Users can opt-in via the Settings modal to receive Web2 email notifications (powered by Nodemailer) whenever they receive a Web3 message.
-- **Web3 Identity (AppKit)**: Seamless login using any major Web3 wallet via Reown/AppKit and Wagmi.
-- **Off-Chain Address Book**: A MongoDB-powered backend allows you to maintain a private, encrypted contact list of aliases without paying gas fees for address book management.
-- **Premium UI**: A sleek, fully responsive dashboard built with Tailwind CSS, Framer Motion, and a vibrant yellow color scheme, complete with pagination and background polling for new messages.
+By combining client-side zero-knowledge encryption, decentralized **IPFS** payload pinning, on-chain `@mailora` human-readable identity routing, and native **Neural AI Superpowers**, Mailora eliminates censorship, phishing threats, and tracking inherent to centralized email providers.
 
-## 🏗️ Architecture
+---
 
-- **Frontend**: Next.js (App Router), React, Tailwind CSS, Lucide React
-- **Web3**: Wagmi, Viem, Reown AppKit
-- **Smart Contracts**: Solidity, Hardhat, deployed on Celo
-- **Storage**: IPFS (Pinata SDK)
-- **Database**: MongoDB (Mongoose)
+## ⚡ Core Features & Capabilities
 
-## 🚀 Getting Started
+### 🧠 1. Mailora AI Neural Suite
+- **AI Smart Compose & Tone Rewriter**: Draft entire emails from simple prompts or rewrite drafts across 5 distinct tones (*Professional*, *Friendly*, *Web3 Native*, *Ultra Concise*, *Persuasive*).
+- **AI Phishing & Threat Shield**: Real-time message inspection that flags dangerous links, malicious contracts, fake airdrop scams, and seed phrase harvesting attempts.
+- **AI 1-Click Executive Summarizer**: Automatically extracts structured bullet points, key takeaways, action items, and urgency indicators from long messages.
+- **AI Smart Quick Replies**: Context-aware, one-click reply recommendations tailored to incoming messages.
 
-### Prerequisites
-- Node.js (v18+)
-- MongoDB connection string (e.g., MongoDB Atlas)
-- Pinata API Keys (for IPFS pinning)
-- A Web3 Wallet (MetaMask, Valora, etc.)
+### 💰 2. Token & BOT Payment Attachments ("Pay-with-Mail")
+- **Direct Crypto Transfers**: Attach native Botcoin (`BOT`) directly inside an encrypted email.
+- **On-Chain Verification**: Recipients receive a verified payment card with transaction hash and direct link to the BotChain Block Explorer.
+
+### ⛽ 3. Gasless Sponsored Relayer Mode
+- **Zero-Gas Onboarding**: New users can claim their `@mailora` handle and dispatch encrypted messages with zero gas via the serverless sponsored relayer (`/api/relayer`).
+
+### 👥 4. Gmail-Style Multi-Recipient Tag Input & Autocomplete
+- **Interactive Chips / Tags**: Send to one or multiple recipients simultaneously with interactive avatar initial chips (`[G] gate.io@mailora (x)`).
+- **Live Directory Autocomplete**: Real-time suggestions from your Address Book, recent inbox senders, and dispatched contacts.
+- **Keyboard Triggers**: Convert entered text to chips via <kbd>Enter</kbd>, <kbd>,</kbd>, <kbd>Space</kbd>, or <kbd>Tab</kbd>.
+
+### ⏰ 5. Scheduled Dispatch & Snooze
+- **Scheduled Sending**: Schedule encrypted messages for future delivery (*In 1 Hour*, *Tomorrow Morning*, *Custom Date/Time*) with a dedicated **Scheduled** dashboard view.
+- **Message Snoozing**: Temporarily hide incoming messages from your inbox (*1 Hour*, *24 Hours*, *7 Days*) to revisit when ready.
+
+### 🔔 6. Telegram & Web2 Notification Bridge
+- **Telegram Bot Alerts**: Link your Telegram Chat ID in Settings to receive instant push alerts when new encrypted messages arrive at your `@mailora` handle.
+- **Web2 Email Bridge**: Optional private email notifications via Nodemailer SMTP.
+
+### 🔐 7. Decentralized Privacy & Security
+- **Local Client-Side Encryption**: Payloads are encrypted and decrypted locally in-browser using recipient public keys before ever touching the network.
+- **Verified Cryptographic Signatures**: Senders sign messages with their connected wallet to prove identity authenticity.
+- **Permanent On-Chain Identity**: Mandatory `@mailora` handles mapped permanently to wallet addresses on BotChain.
+- **IPFS Pinning**: Messages and file attachments up to 5MB are pinned to decentralized IPFS storage.
+
+---
+
+## 🌐 Network Information: BotChain Testnet
+
+| Parameter | Value |
+|---|---|
+| **Network Name** | BotChain Testnet (Bohr) |
+| **Chain ID** | `968` |
+| **RPC URL** | `https://rpc.bohr.life` |
+| **Block Explorer** | [https://scan.bohr.life](https://scan.bohr.life) |
+| **Native Currency** | Botcoin (`BOT`, 18 Decimals) |
+| **Deployed Smart Contract** | [`0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a`](https://scan.bohr.life/address/0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a) |
+
+---
+
+## 🏗️ Architecture & Technology Stack
+
+```mermaid
+graph TD
+    User([Connected Wallet]) -->|Encrypts in Browser| LocalCrypto[Client-side ECDH & AES Encryption]
+    LocalCrypto -->|Pins Encrypted Payload| IPFS[(Pinata IPFS Node)]
+    LocalCrypto -->|Dispatches Transaction| BotChain[BotChain Testnet Node - Chain ID 968]
+    BotChain -->|Smart Contract| Contract[DecentralizedMail.sol: 0xC0DE8FE9...]
+    Contract -->|Event Emission| Receiver([Recipient Wallet & Mailbox])
+    Contract -->|Webhook Alerts| Notifications[Telegram Bot & Email Bridge]
+    LocalCrypto -->|AI Assistant & Scanner| MailoraAI[Mailora AI Suite /api/ai]
+```
+
+- **Frontend**: Next.js 16 (App Router), React 19, Tailwind CSS, Framer Motion, Lucide Icons, React-Quill
+- **Web3 Layer**: Wagmi, Viem, Reown AppKit
+- **Smart Contracts**: Solidity 0.8.24 (`DecentralizedMail.sol`), Hardhat
+- **Decentralized Storage**: IPFS (Pinata SDK)
+- **Database**: MongoDB (Mongoose) for address books, preferences, drafts, and scheduled queues
+- **AI Engine**: Google Gemini API (`gemini-3.5-flash`, `gemini-flash-latest`) & contextual fallback
+
+---
+
+## 🚀 Quickstart & Setup Guide
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/cmail.git
-cd cmail
+git clone https://github.com/webtrovert0x/celomail.git mailora
+cd mailora
 ```
 
-### 2. Frontend Setup
+### 2. Environment Configuration
+In `frontend/.env.local`:
+```env
+# Reown AppKit Project ID (https://dashboard.reown.com)
+NEXT_PUBLIC_PROJECT_ID=your_reown_project_id
+
+# Pinata IPFS JWT
+NEXT_PUBLIC_PINATA_JWT=your_pinata_jwt_token
+
+# MongoDB Connection
+MONGODB_URI=your_mongodb_connection_string
+
+# AI Suite (Google Gemini or OpenAI)
+GEMINI_API_KEY=your_gemini_api_key
+
+# Gasless Relayer Key (BotChain Testnet)
+BOTCHAIN_RELAYER_KEY=your_relayer_private_key
+
+# Optional: Web2 Email Notification Bridge
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_gmail_app_password
+
+# Optional: Telegram Notification Bot Token
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+```
+
+### 3. Run the Development Server
 ```bash
 cd frontend
 npm install
-```
-
-Create a `.env.local` file in the `frontend` directory:
-```env
-NEXT_PUBLIC_PINATA_JWT=your_pinata_jwt
-NEXT_PUBLIC_PROJECT_ID=your_reown_project_id
-MONGODB_URI=your_mongodb_connection_string
-EMAIL_USER=your_gmail_address
-EMAIL_PASS=your_gmail_app_password
-```
-
-Start the frontend development server:
-```bash
 npm run dev
 ```
-The app will be running at `http://localhost:3000`.
+Open [http://localhost:3000](http://localhost:3000) in your browser to launch Mailora.
 
-### 3. Smart Contract Setup
-If you need to deploy the contract yourself (optional, as the frontend uses a pre-deployed address):
-
+### 4. Smart Contract Compilation & Deployment (Hardhat)
 ```bash
 cd contract
 npm install
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network botchain
 ```
 
-Create a `.env` file in the `contract` directory:
-```env
-PRIVATE_KEY=your_wallet_private_key
-```
-
-Deploy to Celo Alfajores Testnet:
-```bash
-npx hardhat run scripts/deploy.js --network alfajores
-```
-*Note: Update the contract address in `frontend/src/utils/abi.ts` after deployment.*
-
-## 📖 How to Use
-
-1. **Connect Wallet**: Click "Connect Wallet" on the landing page to authenticate.
-2. **Claim Identity**: If it's your first time, register a unique alias (e.g., `alice`) which becomes `alice@cmail.com`.
-3. **Add Contacts**: Navigate to the "Contacts" tab to save aliases to your address book.
-4. **Send a Message**: Go to "Drafts" (or click "Reply"), enter a recipient's alias, type your message, and click "Encrypt & Send". You will be prompted to sign a transaction.
-5. **Read Messages**: Your Inbox will automatically fetch and decrypt messages sent to you. Click on any message to read the full content in the Message Details view.
-
-## 🔐 Security Note
-
-While CeloMail encrypts message content, metadata such as the sender's address, recipient's address, and the timestamp of the message are stored on-chain (publicly visible on the block explorer). Do not send sensitive information in the Subject line, as only the body payload is encrypted and sent to IPFS.
+---
 
 ## 📄 License
-
-This project is licensed under the MIT License.
+Released under the [MIT License](LICENSE).

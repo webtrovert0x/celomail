@@ -24,7 +24,7 @@ async function getSharedKey(sender: string, recipient: string): Promise<CryptoKe
   
   const keyMaterial = await crypto.subtle.importKey(
     "raw",
-    enc.encode(addresses + "_cmail_secret"),
+    enc.encode(addresses + "_mailora_secret"),
     { name: "PBKDF2" },
     false,
     ["deriveBits", "deriveKey"]
@@ -33,7 +33,7 @@ async function getSharedKey(sender: string, recipient: string): Promise<CryptoKe
   return crypto.subtle.deriveKey(
     {
       name: "PBKDF2",
-      salt: enc.encode("cmail_salt"),
+      salt: enc.encode("mailora_salt"),
       iterations: 100000,
       hash: "SHA-256"
     },
