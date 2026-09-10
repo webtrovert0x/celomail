@@ -6,6 +6,8 @@
   <p><strong>Decentralized, End-to-End Encrypted, AI-Supercharged Web3 Messaging on BotChain Testnet</strong></p>
   
   <p>
+    <a href="https://cmail-peach.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-cmail--peach.vercel.app-10b981?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
+    <a href="https://t.me/MailoraAlertsBot"><img src="https://img.shields.io/badge/Telegram_Bot-@MailoraAlertsBot-0088cc?style=for-the-badge&logo=telegram" alt="Telegram Bot" /></a>
     <a href="https://scan.bohr.life/address/0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a"><img src="https://img.shields.io/badge/BotChain_Testnet-Chain_ID_968-059669?style=for-the-badge" alt="BotChain Testnet" /></a>
     <img src="https://img.shields.io/badge/Smart_Contract-0xC0DE8FE9...-0284c7?style=for-the-badge" alt="Contract" />
     <img src="https://img.shields.io/badge/AI_Engine-Gemini_%2F_Neural_Shield-10b981?style=for-the-badge" alt="AI Engine" />
