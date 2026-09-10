@@ -2291,16 +2291,26 @@ export default function Dashboard() {
 
             {/* Feature 7: Telegram Notifications Setting */}
             <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
-              <label className="text-xs font-semibold text-slate-200 block flex items-center gap-2">
-                <Bell size={14} className="text-teal-400" />
-                Telegram Instant Alert Bot
-              </label>
+              <div className="flex items-center justify-between">
+                <label className="text-xs font-semibold text-slate-200 flex items-center gap-2">
+                  <Bell size={14} className="text-teal-400" />
+                  Telegram Instant Alert Bot
+                </label>
+                <a
+                  href="https://t.me/MailoraAlertsBot"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-[10px] text-teal-400 hover:text-teal-300 bg-teal-500/10 px-2 py-0.5 rounded-full border border-teal-500/20 font-medium"
+                >
+                  @MailoraAlertsBot ↗
+                </a>
+              </div>
               <p className="text-[11px] text-slate-400 leading-relaxed">
-                Receive instant Telegram push alerts when your @mailora alias receives messages.
+                Receive instant Telegram push alerts when your @mailora alias receives messages. Start <a href="https://t.me/MailoraAlertsBot" target="_blank" rel="noreferrer" className="text-teal-400 underline">@MailoraAlertsBot</a> and enter your Chat ID below.
               </p>
               <input
                 type="text"
-                placeholder="Telegram Chat ID or @username"
+                placeholder="Telegram Chat ID (e.g. 123456789)"
                 value={telegramPref}
                 onChange={(e) => setTelegramPref(e.target.value)}
                 className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 font-mono"
