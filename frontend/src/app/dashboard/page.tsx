@@ -872,7 +872,7 @@ export default function Dashboard() {
                 </span>
                 <span className="text-[10px] text-slate-400 flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  BotChain (968)
+                  BOT Chain (677)
                 </span>
               </div>
             </Link>
@@ -2321,25 +2321,25 @@ export default function Dashboard() {
             <div className="p-3.5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2 text-xs text-slate-400">
               <div className="flex justify-between">
                 <span>Active Network:</span>
-                <span className="font-semibold text-emerald-400">BotChain Testnet</span>
+                <span className="font-semibold text-emerald-400">BOT Chain (Mainnet)</span>
               </div>
               <div className="flex justify-between">
                 <span>Chain ID:</span>
-                <span className="font-mono text-slate-300">968</span>
+                <span className="font-mono text-slate-300">677</span>
               </div>
               <div className="flex justify-between">
                 <span>RPC URL:</span>
-                <span className="font-mono text-slate-300">https://rpc.bohr.life</span>
+                <span className="font-mono text-slate-300">https://rpc.botchain.ai</span>
               </div>
               <div className="flex justify-between">
                 <span>Explorer:</span>
                 <a
-                  href="https://scan.bohr.life"
+                  href="https://scan.botchain.ai"
                   target="_blank"
                   rel="noreferrer"
                   className="text-emerald-400 hover:underline flex items-center gap-1"
                 >
-                  scan.bohr.life <ExternalLink size={11} />
+                  scan.botchain.ai <ExternalLink size={11} />
                 </a>
               </div>
             </div>

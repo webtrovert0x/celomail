@@ -3,10 +3,10 @@
 
 **Date:** September 2026  
 **Authors:** Mailora Core Protocol Contributors  
-**Network:** BotChain Testnet (Chain ID 968) / BotChain Mainnet  
+**Network:** BOT Chain (Chain ID 677)  
 **Website:** [https://cmail-peach.vercel.app](https://cmail-peach.vercel.app)  
 **GitHub:** [https://github.com/webtrovert0x/Mailora](https://github.com/webtrovert0x/Mailora)  
-**Smart Contract:** [`0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a`](https://scan.bohr.life/address/0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a#code)  
+**Smart Contract:** [`0xEB7db04310755A9bBEf1581bd18A3E63733Ac725`](https://scan.botchain.ai/address/0xEB7db04310755A9bBEf1581bd18A3E63733Ac725#code)  
 
 ---
 
@@ -105,15 +105,14 @@ To bridge the gap between asynchronous blockchain events and active user engagem
 
 ## 7. Smart Contract Specifications
 
-- **Contract Name**: `DecentralizedMail.sol`
+- **Contract Name**: `Mailora.sol`
 - **Compiler**: Solidity `0.8.24` (via Hardhat)
-- **Deployment Address**: `0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a`
-- **Network**: BotChain Testnet (Chain ID `968`, RPC: `https://rpc.bohr.life`)
+- **Deployment Address**: [`0xEB7db04310755A9bBEf1581bd18A3E63733Ac725`](https://scan.botchain.ai/address/0xEB7db04310755A9bBEf1581bd18A3E63733Ac725#code)
+- **Network**: BOT Chain (Chain ID `677`, RPC: `https://rpc.botchain.ai`)
 - **Key Functions**:
-  - `registerUser(string memory _alias)`: Registers a unique human-readable handle.
-  - `sendMessage(address _to, string memory _ipfsHash, ...)`: Anchors encrypted CID and forwards attached BOT tokens.
-  - `getInbox(address _user)`: Retrieves all received on-chain message records.
-  - `getSent(address _user)`: Retrieves all dispatched on-chain message records.
+  - `registerAlias(string memory _alias)`: Registers a unique human-readable handle.
+  - `sendMessage(string memory _toAlias, string memory _contentCID) payable`: Anchors encrypted CID and forwards attached BOT tokens.
+  - `getMyAlias()`: Retrieves the caller's registered `@mailora` handle.
 
 ---
 

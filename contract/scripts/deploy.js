@@ -1,15 +1,18 @@
 const hre = require("hardhat");
 
 async function main() {
-  const DecentralizedMail = await hre.ethers.getContractFactory("DecentralizedMail");
-  const dMail = await DecentralizedMail.deploy();
+  console.log("Deploying Mailora contract to BOT Chain (Chain ID:", hre.network.config.chainId, ")...");
+  const Mailora = await hre.ethers.getContractFactory("Mailora");
+  const mailora = await Mailora.deploy();
 
-  await dMail.waitForDeployment();
+  await mailora.waitForDeployment();
+  const address = await mailora.getAddress();
 
-  console.log("DecentralizedMail deployed to:", await dMail.getAddress());
+  console.log("✅ Mailora successfully deployed to:", address);
+  console.log("🔍 Block Explorer:", `https://scan.botchain.ai/address/${address}`);
 }
 
 main().catch((error) => {
-  console.error(error);
+  console.error("❌ Deployment failed:", error);
   process.exitCode = 1;
 });

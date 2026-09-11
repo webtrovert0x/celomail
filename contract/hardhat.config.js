@@ -1,6 +1,9 @@
 require("dotenv").config();
 require("@nomicfoundation/hardhat-toolbox");
 
+const rawPk = process.env.PRIVATE_KEY || "";
+const accounts = rawPk ? [rawPk.startsWith("0x") ? rawPk : `0x${rawPk}`] : [];
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.24",
@@ -11,14 +14,14 @@ module.exports = {
     hardhat: {
       chainId: 1337
     },
-    alfajores: {
-      url: "https://rpc.ankr.com/celo_sepolia",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      chainId: 11142220
-    },
     botchain: {
+      url: "https://rpc.botchain.ai",
+      accounts: accounts,
+      chainId: 677
+    },
+    botchainTestnet: {
       url: "https://rpc.bohr.life",
-      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      accounts: accounts,
       chainId: 968
     }
   },
@@ -29,10 +32,10 @@ module.exports = {
     customChains: [
       {
         network: "botchain",
-        chainId: 968,
+        chainId: 677,
         urls: {
-          apiURL: "https://scan.bohr.life/api",
-          browserURL: "https://scan.bohr.life"
+          apiURL: "https://scan.botchain.ai/api",
+          browserURL: "https://scan.botchain.ai"
         }
       }
     ]

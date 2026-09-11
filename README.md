@@ -3,14 +3,14 @@
 <div align="center">
   <img src="frontend/public/logo.png" alt="Mailora Logo" width="110" height="110" style="border-radius: 50%; margin-bottom: 12px;" />
   <br />
-  <p><strong>Decentralized, End-to-End Encrypted, AI-Supercharged Web3 Messaging on BotChain Testnet</strong></p>
+  <p><strong>Decentralized, End-to-End Encrypted, AI-Supercharged Web3 Messaging on BOT Chain</strong></p>
   
   <p>
     <a href="https://cmail-peach.vercel.app"><img src="https://img.shields.io/badge/Live_Demo-cmail--peach.vercel.app-10b981?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
     <a href="https://github.com/webtrovert0x/Mailora/blob/main/WHITEPAPER.md"><img src="https://img.shields.io/badge/Whitepaper-v1.0_Read-8b5cf6?style=for-the-badge&logo=googledocs" alt="Whitepaper" /></a>
     <a href="https://t.me/MailoraAlertsBot"><img src="https://img.shields.io/badge/Telegram_Bot-@MailoraAlertsBot-0088cc?style=for-the-badge&logo=telegram" alt="Telegram Bot" /></a>
-    <a href="https://scan.bohr.life/address/0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a"><img src="https://img.shields.io/badge/BotChain_Testnet-Chain_ID_968-059669?style=for-the-badge" alt="BotChain Testnet" /></a>
-    <img src="https://img.shields.io/badge/Smart_Contract-0xC0DE8FE9...-0284c7?style=for-the-badge" alt="Contract" />
+    <a href="https://scan.botchain.ai/address/0xEB7db04310755A9bBEf1581bd18A3E63733Ac725#code"><img src="https://img.shields.io/badge/BOT_Chain-Chain_ID_677-059669?style=for-the-badge" alt="BOT Chain" /></a>
+    <a href="https://scan.botchain.ai/address/0xEB7db04310755A9bBEf1581bd18A3E63733Ac725#code"><img src="https://img.shields.io/badge/Contract-0xEB7db043...-0284c7?style=for-the-badge" alt="Contract" /></a>
     <img src="https://img.shields.io/badge/AI_Engine-Gemini_%2F_Neural_Shield-10b981?style=for-the-badge" alt="AI Engine" />
   </p>
 </div>
@@ -19,7 +19,7 @@
 
 ## 🌟 Overview
 
-**Mailora** is a state-of-the-art decentralized mailbox operating natively on **BotChain Testnet (Chain ID 968)** with native token **Botcoin (`BOT`)**. 
+**Mailora** is a state-of-the-art decentralized mailbox operating natively on **BOT Chain (Chain ID 677)** with native token **Botcoin (`BOT`)**. 
 
 By combining client-side zero-knowledge encryption, decentralized **IPFS** payload pinning, on-chain `@mailora` human-readable identity routing, and native **Neural AI Superpowers**, Mailora eliminates censorship, phishing threats, and tracking inherent to centralized email providers.
 
@@ -35,7 +35,7 @@ By combining client-side zero-knowledge encryption, decentralized **IPFS** paylo
 
 ### 💰 2. Token & BOT Payment Attachments ("Pay-with-Mail")
 - **Direct Crypto Transfers**: Attach native Botcoin (`BOT`) directly inside an encrypted email.
-- **On-Chain Verification**: Recipients receive a verified payment card with transaction hash and direct link to the BotChain Block Explorer.
+- **On-Chain Verification**: Recipients receive a verified payment card with transaction hash and direct link to the BOT Chain Block Explorer.
 
 ### ⛽ 3. Gasless Sponsored Relayer Mode
 - **Zero-Gas Onboarding**: New users can claim their `@mailora` handle and dispatch encrypted messages with zero gas via the serverless sponsored relayer (`/api/relayer`).
@@ -56,21 +56,21 @@ By combining client-side zero-knowledge encryption, decentralized **IPFS** paylo
 ### 🔐 7. Decentralized Privacy & Security
 - **Local Client-Side Encryption**: Payloads are encrypted and decrypted locally in-browser using recipient public keys before ever touching the network.
 - **Verified Cryptographic Signatures**: Senders sign messages with their connected wallet to prove identity authenticity.
-- **Permanent On-Chain Identity**: Mandatory `@mailora` handles mapped permanently to wallet addresses on BotChain.
+- **Permanent On-Chain Identity**: Mandatory `@mailora` handles mapped permanently to wallet addresses on BOT Chain.
 - **IPFS Pinning**: Messages and file attachments up to 5MB are pinned to decentralized IPFS storage.
 
 ---
 
-## 🌐 Network Information: BotChain Testnet
+## 🌐 Network Information: BOT Chain Mainnet
 
 | Parameter | Value |
 |---|---|
-| **Network Name** | BotChain Testnet (Bohr) |
-| **Chain ID** | `968` |
-| **RPC URL** | `https://rpc.bohr.life` |
-| **Block Explorer** | [https://scan.bohr.life](https://scan.bohr.life) |
+| **Network Name** | BOT Chain |
+| **Chain ID** | `677` |
+| **RPC URL** | `https://rpc.botchain.ai` |
+| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
 | **Native Currency** | Botcoin (`BOT`, 18 Decimals) |
-| **Deployed Smart Contract** | [`0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a`](https://scan.bohr.life/address/0xC0DE8FE984F889f8a7367BD1DE8DBBBFB05cE13a) |
+| **Deployed Smart Contract** | [`0xEB7db04310755A9bBEf1581bd18A3E63733Ac725`](https://scan.botchain.ai/address/0xEB7db04310755A9bBEf1581bd18A3E63733Ac725#code) |
 
 ---
 

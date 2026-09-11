@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 import { createWalletClient, createPublicClient, http } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
-import { botchainTestnet } from '@/config';
-import { CONTRACT_ADDRESS, DecentralizedMailABI } from '@/utils/abi';
+import { botchainMainnet } from '@/config';
+import { CONTRACT_ADDRESS, MailoraABI } from '@/utils/abi';
 
 const RELAYER_KEY = (process.env.BOTCHAIN_RELAYER_KEY || process.env.PRIVATE_KEY || '6ece124cd7edffc4a0938c1438cb97be5493a10fe1d92826facba6f91332beb1') as `0x${string}`;
 
@@ -15,14 +15,14 @@ export async function POST(request: Request) {
     const account = privateKeyToAccount(formattedKey);
 
     const publicClient = createPublicClient({
-      chain: botchainTestnet,
-      transport: http('https://rpc.bohr.life')
+      chain: botchainMainnet,
+      transport: http('https://rpc.botchain.ai')
     });
 
     const walletClient = createWalletClient({
       account,
-      chain: botchainTestnet,
-      transport: http('https://rpc.bohr.life')
+      chain: botchainMainnet,
+      transport: http('https://rpc.botchain.ai')
     });
 
     if (action === 'sendMessage') {
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
 
       const hash = await walletClient.writeContract({
         address: CONTRACT_ADDRESS as `0x${string}`,
-        abi: DecentralizedMailABI,
+        abi: MailoraABI,
         functionName: 'sendMessage',
         args: [toAlias, contentCID]
       });
@@ -57,7 +57,7 @@ export async function POST(request: Request) {
 
       const hash = await walletClient.writeContract({
         address: CONTRACT_ADDRESS as `0x${string}`,
-        abi: DecentralizedMailABI,
+        abi: MailoraABI,
         functionName: 'registerAlias',
         args: [alias]
       });

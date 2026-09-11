@@ -74,13 +74,13 @@ export default function Home() {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://scan.bohr.life"
+            href="https://scan.botchain.ai"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex items-center gap-1.5 text-xs text-slate-400 hover:text-emerald-400 transition-colors px-3 py-1.5 rounded-xl bg-white/[0.03] border border-white/5"
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            BotChain Testnet (968)
+            BOT Chain Mainnet (677)
             <ExternalLink className="w-3 h-3 ml-0.5 text-slate-500" />
           </a>
 
@@ -216,8 +216,8 @@ export default function Home() {
             {
               icon: <Globe className="w-6 h-6 text-emerald-400" />,
               title: "Decentralized Handle (@mailora)",
-              desc: "Claim your on-chain alias on BotChain Testnet (Chain ID 968) and map human-readable handles to wallet addresses.",
-              badge: "BotChain ID"
+              desc: "Claim your on-chain alias on BOT Chain (Chain ID 677) and map human-readable handles to wallet addresses.",
+              badge: "BOT Chain ID"
             },
             {
               icon: <Sparkles className="w-6 h-6 text-teal-400" />,
@@ -228,7 +228,7 @@ export default function Home() {
             {
               icon: <Zap className="w-6 h-6 text-cyan-400" />,
               title: "Sub-Second Gas Efficiency",
-              desc: "Super-fast message propagation on BotChain with minimal gas footprint and automated draft persistence.",
+              desc: "Super-fast message propagation on BOT Chain with minimal gas footprint and automated draft persistence.",
               badge: "High Performance"
             }
           ].map((feat, i) => (
@@ -265,14 +265,14 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <span className="font-bold text-slate-300">Mailora</span>
             <span>—</span>
-            <span>Decentralized AI Mailbox on BotChain Testnet (968)</span>
+            <span>Decentralized AI Mailbox on BOT Chain (677)</span>
           </div>
           <div className="flex items-center gap-6 text-slate-400">
-            <a href="https://scan.bohr.life" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
-              BohrScan Explorer
+            <a href="https://scan.botchain.ai" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
+              BOT Chain Explorer
             </a>
-            <a href="https://rpc.bohr.life" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
-              BotChain RPC
+            <a href="https://rpc.botchain.ai" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition-colors">
+              BOT Chain RPC
             </a>
           </div>
         </div>

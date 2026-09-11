@@ -158,7 +158,7 @@ export function AISecurityBanner({
                 <Lock className="w-3.5 h-3.5 text-emerald-400" />
                 End-to-End Encrypted via IPFS & BotChain
               </span>
-              <span>Network: BotChain Testnet (968)</span>
+              <span>Network: BOT Chain Mainnet (677)</span>
             </div>
           </motion.div>
         )}
