@@ -80,8 +80,8 @@ By combining client-side zero-knowledge encryption, decentralized **IPFS** paylo
 graph TD
     User([Connected Wallet]) -->|Encrypts in Browser| LocalCrypto[Client-side ECDH & AES Encryption]
     LocalCrypto -->|Pins Encrypted Payload| IPFS[(Pinata IPFS Node)]
-    LocalCrypto -->|Dispatches Transaction| BotChain[BotChain Testnet Node - Chain ID 968]
-    BotChain -->|Smart Contract| Contract[DecentralizedMail.sol: 0xC0DE8FE9...]
+    LocalCrypto -->|Dispatches Transaction| BotChain[BOT Chain Node - Chain ID 677]
+    BotChain -->|Smart Contract| Contract[Mailora.sol: 0xEB7db043...]
     Contract -->|Event Emission| Receiver([Recipient Wallet & Mailbox])
     Contract -->|Webhook Alerts| Notifications[Telegram Bot & Email Bridge]
     LocalCrypto -->|AI Assistant & Scanner| MailoraAI[Mailora AI Suite /api/ai]
@@ -89,7 +89,7 @@ graph TD
 
 - **Frontend**: Next.js 16 (App Router), React 19, Tailwind CSS, Framer Motion, Lucide Icons, React-Quill
 - **Web3 Layer**: Wagmi, Viem, Reown AppKit
-- **Smart Contracts**: Solidity 0.8.24 (`DecentralizedMail.sol`), Hardhat
+- **Smart Contracts**: Solidity 0.8.24 (`Mailora.sol`), Hardhat
 - **Decentralized Storage**: IPFS (Pinata SDK)
 - **Database**: MongoDB (Mongoose) for address books, preferences, drafts, and scheduled queues
 - **AI Engine**: Google Gemini API (`gemini-3.5-flash`, `gemini-flash-latest`) & contextual fallback

@@ -55,7 +55,7 @@ Mailora addresses these challenges through a modular, four-layer decentralized a
                                │
 ┌──────────────────────────────▼──────────────────────────────┐
 │                   BotChain Settlement Layer                 │
-│ (DecentralizedMail.sol, Identity Registry, BOT Payments)   │
+│ (Mailora.sol, Identity Registry, BOT Payments)             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -63,7 +63,7 @@ Mailora addresses these challenges through a modular, four-layer decentralized a
 All messages, subject lines, and file attachments are encrypted locally in the sender's browser using AES-256-GCM before transmission. Encryption keys are securely encapsulated using Elliptic Curve Diffie-Hellman (ECDH) derived from the recipient’s public key. Neither Mailora relayers nor IPFS node operators possess the mathematical ability to decrypt stored messages.
 
 ### 3.2 Permanent On-Chain Identity (`@mailora`)
-Mailora eliminates raw hexadecimal wallet clutter by implementing an immutable on-chain name registry within `DecentralizedMail.sol`. Users bind human-readable aliases (e.g., `alice@mailora`) directly to their BotChain address, enabling seamless auto-completion, verified sender badges, and universal address books.
+Mailora eliminates raw hexadecimal wallet clutter by implementing an immutable on-chain name registry within `Mailora.sol`. Users bind human-readable aliases (e.g., `alice@mailora`) directly to their BotChain address, enabling seamless auto-completion, verified sender badges, and universal address books.
 
 ### 3.3 Decentralized Storage (IPFS)
 Encrypted payloads and attachments (up to 5MB) are uploaded to InterPlanetary File System (IPFS) nodes via Pinata. The resulting Content Identifier (CID) is cryptographically signed and anchored to the BotChain smart contract.
